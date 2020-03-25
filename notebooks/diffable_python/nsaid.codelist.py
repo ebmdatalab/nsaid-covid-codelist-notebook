@@ -39,4 +39,4 @@ nsaid_codelist = bq.cached_read(sql, csv_path=os.path.join('..','data','nsaid_co
 nsaid_codelist.head(10)
 # -
 
-
+nsaid_codelist.info()
