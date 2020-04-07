@@ -15,6 +15,7 @@
 # ---
 
 from ebmdatalab import bq
+import pandas as pd
 import os
 
 # +
@@ -36,7 +37,8 @@ WHERE bnf_code IN (SELECT * FROM bnf_codes)
 ORDER BY type, bnf_code, id'''
 
 nsaid_codelist = bq.cached_read(sql, csv_path=os.path.join('..','data','nsaid_codelist.csv'))
-nsaid_codelist.head(10)
+pd.set_option('display.max_rows', None)
+nsaid_codelist
 # -
 
 nsaid_codelist.info()
