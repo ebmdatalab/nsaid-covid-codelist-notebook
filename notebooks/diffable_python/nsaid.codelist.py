@@ -14,31 +14,34 @@
 #     name: python3
 # ---
 
+# The following notebook generates [NHS Dictionary of Medicines and Devices](https://ebmdatalab.net/what-is-the-dmd-the-nhs-dictionary-of-medicines-and-devices/) codes for oral NSAIDs. You can see [current NSAID prescribing patterns on OpenPrescribing](https://openprescribing.net/bnf/100101/)
+
+#import libraries
 from ebmdatalab import bq
 import pandas as pd
 import os
 
 # +
-sql = '''WITH bnf_codes AS (
+sql = '''
+WITH bnf_codes AS (
   SELECT bnf_code FROM hscic.presentation WHERE 
   bnf_code LIKE '1001010%' #bnf section non-steroidal anti-inflammatory drugs
-  )
 
-SELECT "vmp" AS type, id, bnf_code, nm
-FROM dmd.vmp
-WHERE bnf_code IN (SELECT * FROM bnf_codes)
+)
 
-UNION ALL
-
-SELECT "amp" AS type, id, bnf_code, descr
-FROM dmd.amp
-WHERE bnf_code IN (SELECT * FROM bnf_codes)
-
-ORDER BY type, bnf_code, id'''
+SELECT *
+FROM measures.dmd_objs_with_form_route
+WHERE bnf_code IN (SELECT * FROM bnf_codes) 
+AND 
+obj_type IN ('vmp', 'amp')
+AND
+form_route LIKE '%.oral%' #include oral preparations only
+ORDER BY obj_type, bnf_code, snomed_id'''
 
 nsaid_codelist = bq.cached_read(sql, csv_path=os.path.join('..','data','nsaid_codelist.csv'))
 pd.set_option('display.max_rows', None)
+pd.set_option('display.max_colwidth', None)
 nsaid_codelist
 # -
 
-nsaid_codelist.info()
+
