@@ -51,6 +51,7 @@ ORDER BY obj_type, bnf_code, snomed_id
 naproxen_codelist = bq.cached_read(sql, csv_path=os.path.join('..','data','naproxen_codelist.csv'))
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_colwidth', None)
+naproxen_codelist.rename(columns={'snomed_id':'id'}, inplace=True) ##rename to fit another notebook with code already written
 naproxen_codelist
 
 
