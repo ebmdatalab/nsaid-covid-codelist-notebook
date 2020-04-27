@@ -19,6 +19,7 @@
 # - [All naproxen codes](#all)
 # - [High dose naproxen](#hd)
 # - [Low dose naproxen](#ld)
+# - [Other oral naproxen](#other)
 
 #import libraries
 from ebmdatalab import bq
@@ -42,8 +43,8 @@ AND
 obj_type IN ('vmp', 'amp')
 AND
 form_route LIKE '%.oral%' #gets rid of suppositories
-AND
-form_route NOT LIKE '%susp%' #this drops oral liquids ie suspensions
+## AND
+## form_route NOT LIKE '%susp%' #this drops oral liquids ie suspensions
 ORDER BY obj_type, bnf_code, snomed_id
 '''
 
@@ -53,19 +54,27 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.max_colwidth', None)
 naproxen_codelist.rename(columns={'snomed_id':'id'}, inplace=True) ##rename to fit another notebook with code already written
 naproxen_codelist
-
-
-# +
-## High dose naproxen <a id='hd'></a>
 # -
 
-naproxen_high_dose = naproxen_codelist[naproxen_codelist['bnf_name'].str.contains("500mg")]
+
+# ## High dose naproxen <a id='hd'></a>
+
+# +
+naproxen_high_dose = naproxen_codelist[naproxen_codelist['bnf_name'].str.contains("500mg") & ~naproxen_codelist['form_route'].str.contains("susp")]
 naproxen_high_dose
+# -
 
 
 # ## Low dose naproxen <a id='ld'></a>
 
-naproxen_low_dose = naproxen_codelist[naproxen_codelist['bnf_name'].str.contains("250mg")]
+naproxen_low_dose = naproxen_codelist[naproxen_codelist['bnf_name'].str.contains("250mg") & ~naproxen_codelist['form_route'].str.contains("susp")]
 naproxen_low_dose
+
+# ## Other oral naproxen <a id='other'></a>
+
+naproxen_375 = naproxen_codelist[naproxen_codelist['bnf_name'].str.contains("375mg | 275mg")]
+naproxen_susp = naproxen_codelist[naproxen_codelist['form_route'].str.contains("susp")]
+naproxen_other = pd.concat([naproxen_375, naproxen_susp], ignore_index=True)
+naproxen_other.sort_values(["obj_type"])
 
 

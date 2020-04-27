@@ -87,6 +87,19 @@ amp,36564511000001103,15236411000001105,1001010P0AAAJAJ,Naproxen 375mg gastro-re
 amp,36564511000001103,30062611000001103,1001010P0AAAJAJ,Naproxen 375mg gastro-resistant tablets (DE Pharmaceuticals),Naproxen 375mg gastro-resistant tablets,tabletgastro-resistant.oral
 amp,36564511000001103,37336111000001109,1001010P0AAAJAJ,Naproxen 375mg gastro-resistant tablets (Sovereign Medical Ltd),Naproxen 375mg gastro-resistant tablets,tabletgastro-resistant.oral
 amp,36564511000001103,37999411000001109,1001010P0AAAJAJ,Naproxen 375mg gastro-resistant tablets (Medreich Plc),Naproxen 375mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,329852000,8637511000001100,1001010P0AAARAR,Naproxen 125mg/5ml oral suspension (Special Order),Naproxen 125mg/5ml oral suspension,suspension.oral
+amp,8669811000001101,8639711000001102,1001010P0AAATAT,Naproxen 500mg/5ml oral suspension (Special Order),Naproxen 500mg/5ml oral suspension,suspension.oral
+amp,12301311000001108,12257211000001109,1001010P0AAAYAY,Naproxen 100mg/5ml oral suspension (Special Order),Naproxen 100mg/5ml oral suspension,suspension.oral
+amp,12301611000001103,12258411000001107,1001010P0AAAZAZ,Naproxen 75mg/5ml oral suspension (Special Order),Naproxen 75mg/5ml oral suspension,suspension.oral
+amp,12301411000001101,12257611000001106,1001010P0AABCBC,Naproxen 200mg/5ml oral suspension (Drug Tariff Special Order),Naproxen 200mg/5ml oral suspension,suspension.oral
+amp,32638811000001105,32636911000001104,1001010P0AABEBE,Naproxen 25mg/ml oral suspension sugar free (Orion Pharma (UK) Ltd),Naproxen 125mg/5ml oral suspension sugar free,suspension.oral
+amp,32638811000001105,32775911000001100,1001010P0AABEBE,Naproxen 125mg/5ml oral suspension sugar free (A A H Pharmaceuticals Ltd),Naproxen 125mg/5ml oral suspension sugar free,suspension.oral
+amp,32638811000001105,33136211000001102,1001010P0AABEBE,Naproxen 125mg/5ml oral suspension sugar free (Alliance Healthcare (Distribution) Ltd),Naproxen 125mg/5ml oral suspension sugar free,suspension.oral
+amp,8669711000001109,8638311000001107,1001010P0AABFBF,Naproxen 250mg/5ml oral suspension (Special Order),Naproxen 250mg/5ml oral suspension,suspension.oral
+amp,8669711000001109,33743911000001109,1001010P0AABFBF,Naproxen 50mg/ml oral suspension (Thornton & Ross Ltd),Naproxen 250mg/5ml oral suspension,suspension.oral
+amp,8669711000001109,34195911000001106,1001010P0AABFBF,Naproxen 50mg/ml oral suspension (Alliance Healthcare (Distribution) Ltd),Naproxen 250mg/5ml oral suspension,suspension.oral
+amp,8669711000001109,34328011000001102,1001010P0AABFBF,Naproxen 50mg/ml oral suspension (A A H Pharmaceuticals Ltd),Naproxen 250mg/5ml oral suspension,suspension.oral
+amp,8669711000001109,37609211000001109,1001010P0AABFBF,Naproxen 50mg/ml oral suspension (DE Pharmaceuticals),Naproxen 250mg/5ml oral suspension,suspension.oral
 amp,329806007,894311000001106,1001010P0BCAAAD,Naprosyn 250mg tablets (Atnahs Pharma UK Ltd),Naprosyn 250mg tablets,tablet.oral
 amp,329807003,162011000001106,1001010P0BCABAE,Naprosyn 500mg tablets (Atnahs Pharma UK Ltd),Naprosyn 500mg tablets,tablet.oral
 amp,329838002,178811000001105,1001010P0BCAGAH,Naprosyn EC 250mg tablets (Atnahs Pharma UK Ltd),Naprosyn EC 250mg tablets,tabletgastro-resistant.oral
@@ -104,5 +117,12 @@ vmp,329838002,329838002,1001010P0AAAHAH,Naproxen 250mg gastro-resistant tablets,
 vmp,329839005,329839005,1001010P0AAAIAI,Naproxen 500mg gastro-resistant tablets,Naproxen 500mg gastro-resistant tablets,tabletgastro-resistant.oral
 vmp,36564511000001103,36564511000001103,1001010P0AAAJAJ,Naproxen 375mg gastro-resistant tablets,Naproxen 375mg gastro-resistant tablets,tabletgastro-resistant.oral
 vmp,36030111000001106,36030111000001106,1001010P0AAAQAQ,Naproxen 500mg modified-release tablets,Naproxen 500mg modified-release tablets,tabletmodified-release.oral
+vmp,329852000,329852000,1001010P0AAARAR,Naproxen 125mg/5ml oral suspension,Naproxen 125mg/5ml oral suspension,suspension.oral
+vmp,8669811000001101,8669811000001101,1001010P0AAATAT,Naproxen 500mg/5ml oral suspension,Naproxen 500mg/5ml oral suspension,suspension.oral
+vmp,12301311000001108,12301311000001108,1001010P0AAAYAY,Naproxen 100mg/5ml oral suspension,Naproxen 100mg/5ml oral suspension,suspension.oral
+vmp,12301611000001103,12301611000001103,1001010P0AAAZAZ,Naproxen 75mg/5ml oral suspension,Naproxen 75mg/5ml oral suspension,suspension.oral
 vmp,18245811000001107,18245811000001107,1001010P0AABBBB,Naproxen 500mg / Esomeprazole 20mg modified-release tablets,Naproxen 500mg / Esomeprazole 20mg modified-release tablets,tabletmodified-release.oral
+vmp,12301411000001101,12301411000001101,1001010P0AABCBC,Naproxen 200mg/5ml oral suspension,Naproxen 200mg/5ml oral suspension,suspension.oral
 vmp,31306711000001103,31306711000001103,1001010P0AABDBD,Naproxen 250mg effervescent tablets sugar free,Naproxen 250mg effervescent tablets sugar free,solution.oral
+vmp,32638811000001105,32638811000001105,1001010P0AABEBE,Naproxen 125mg/5ml oral suspension sugar free,Naproxen 125mg/5ml oral suspension sugar free,suspension.oral
+vmp,8669711000001109,8669711000001109,1001010P0AABFBF,Naproxen 250mg/5ml oral suspension,Naproxen 250mg/5ml oral suspension,suspension.oral
