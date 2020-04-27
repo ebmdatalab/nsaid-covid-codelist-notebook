@@ -61,6 +61,7 @@ naproxen_codelist
 
 # +
 naproxen_high_dose = naproxen_codelist[naproxen_codelist['bnf_name'].str.contains("500mg") & ~naproxen_codelist['form_route'].str.contains("susp")]
+naproxen_high_dose.to_csv(os.path.join('..','data','naproxen_high_dose.csv')) 
 naproxen_high_dose
 # -
 
@@ -76,6 +77,9 @@ naproxen_low_dose
 naproxen_375 = naproxen_codelist[naproxen_codelist['bnf_name'].str.contains("375mg | 275mg")]
 naproxen_susp = naproxen_codelist[naproxen_codelist['form_route'].str.contains("susp")]
 naproxen_other = pd.concat([naproxen_375, naproxen_susp], ignore_index=True)
-naproxen_other.sort_values(["obj_type"])
+naproxen_other.sort_values(["obj_type"], inplace=True)
+
+naproxen_other.to_csv(os.path.join('..','data','naproxen_other.csv')) 
+naproxen_other
 
 
