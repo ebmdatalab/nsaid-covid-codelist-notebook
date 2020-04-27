@@ -42,7 +42,7 @@ WHERE bnf_code IN (SELECT * FROM bnf_codes)
 AND 
 obj_type IN ('vmp', 'amp')
 AND
-form_route LIKE '%.oral%' #gets rid of suppositories
+form_route LIKE '%.oral%' 
 ## AND
 ## form_route NOT LIKE '%susp%' #this drops oral liquids ie suspensions
 ORDER BY obj_type, bnf_code, snomed_id
@@ -68,6 +68,7 @@ naproxen_high_dose
 # ## Low dose naproxen <a id='ld'></a>
 
 naproxen_low_dose = naproxen_codelist[naproxen_codelist['bnf_name'].str.contains("250mg") & ~naproxen_codelist['form_route'].str.contains("susp")]
+naproxen_low_dose.to_csv(os.path.join('..','data','naproxen_low_dose.csv')) 
 naproxen_low_dose
 
 # ## Other oral naproxen <a id='other'></a>
