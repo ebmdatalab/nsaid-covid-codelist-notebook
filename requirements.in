@@ -20,3 +20,12 @@ plotly
 ipywidgets
 
 # Add extra per-notebook packages here
+
+# Needed for accessing SQL Server databases
+pyodbc
+
+# Needed for parsing arbitrary boolean expressions
+sqlparse
+
+# For running tests
+sqlalchemy
