@@ -38,11 +38,8 @@ AND
 obj_type IN ('vmp', 'amp')
 AND
 form_route LIKE '%.oral%' 
-## AND
-## form_route NOT LIKE '%susp%' #this drops oral liquids ie suspensions
 ORDER BY obj_type, bnf_code, snomed_id
 '''
-
 
 cox2_codelist = bq.cached_read(sql, csv_path=os.path.join('..','data','cox2_codelist.csv'))
 pd.set_option('display.max_rows', None)
