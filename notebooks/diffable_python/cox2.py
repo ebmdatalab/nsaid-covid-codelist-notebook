@@ -27,8 +27,8 @@ import pandas as pd
 sql = '''
 WITH bnf_codes AS (
   SELECT bnf_code FROM hscic.presentation WHERE 
-  bnf_code LIKE '1001010AJ%' or #bnf chemical naproxen
-  bnf_code LIKE '1001010AH%'    #bnf chemical naproxen  
+  bnf_code LIKE '1001010AJ%' or #bnf chemical etoricoxib
+  bnf_code LIKE '1001010AH%'    #bnf chemical celecoxib
 )
 
 SELECT *
@@ -49,3 +49,6 @@ pd.set_option('display.max_rows', None)
 pd.set_option('display.max_colwidth', None)
 cox2_codelist
 cox2_codelist
+# -
+
+
