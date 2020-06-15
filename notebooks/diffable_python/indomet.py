@@ -14,9 +14,9 @@
 #     name: python3
 # ---
 
-The following notebook identifies NHS dm+d codes for indometacin at a AMP and VMP level. T
-- [indometacin prescribing volume](https://openprescribing.net/chemical/1001010K0/) on OpenPrescribing
-
+# The following notebook identifies NHS dm+d codes for indometacin at a AMP and VMP level. T
+# - [indometacin prescribing volume](https://openprescribing.net/chemical/1001010K0/) on OpenPrescribing
+#
 
 #import libraries
 from ebmdatalab import bq
@@ -40,8 +40,10 @@ form_route LIKE '%.oral%'
 ORDER BY obj_type, bnf_code, snomed_id
 '''
 
-indomet_codelist = bq.cached_read(sql, csv_path=os.path.join('..','data','cox2_codelist.csv'))
+indomet_codelist = bq.cached_read(sql, csv_path=os.path.join('..','data','indomet_codelist.csv'))
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_colwidth', None)
-cox2_codelist
-cox2_codelist
+indomet_codelist
+# -
+
+
