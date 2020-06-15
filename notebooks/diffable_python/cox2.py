@@ -27,8 +27,8 @@ import pandas as pd
 sql = '''
 WITH bnf_codes AS (
   SELECT bnf_code FROM hscic.presentation WHERE 
-  bnf_code LIKE '1001010AJ%' or #bnf chemical naproxen
-  bnf_code LIKE '1001010AH%'    #bnf chemical naproxen  
+  bnf_code LIKE '1001010AJ%' or #bnf chemical etoricoxib
+  bnf_code LIKE '1001010AH%'    #bnf chemical celecoxib
 )
 
 SELECT *
@@ -38,14 +38,14 @@ AND
 obj_type IN ('vmp', 'amp')
 AND
 form_route LIKE '%.oral%' 
-## AND
-## form_route NOT LIKE '%susp%' #this drops oral liquids ie suspensions
 ORDER BY obj_type, bnf_code, snomed_id
 '''
-
 
 cox2_codelist = bq.cached_read(sql, csv_path=os.path.join('..','data','cox2_codelist.csv'))
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_colwidth', None)
 cox2_codelist
 cox2_codelist
+# -
+
+
