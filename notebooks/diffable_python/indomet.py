@@ -44,6 +44,6 @@ indomet_codelist = bq.cached_read(sql, csv_path=os.path.join('..','data','indome
 pd.set_option('display.max_rows', None)
 pd.set_option('display.max_colwidth', None)
 indomet_codelist
-# -
+# +
 
 
